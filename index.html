@@ -98,3 +98,33 @@ function add() {
     let u = document.getElementById('u').value.trim();
     let cat = document.getElementById('catSelect').value;
     if(!u) return;
+        let nextNum = data.length + 1;
+    data.push([nextNum, u, cat]);
+    localStorage.setItem('tri88final', JSON.stringify(data));
+    render();
+    document.getElementById('u').value = '';
+}
+
+function exporter(type) {
+    let contenu = "";
+    if(type === 'txt') {
+        data.forEach(([n,url,cat]) => { contenu += `${n} - [${cat}] - ${url}\n`; });
+        telecharger(contenu, "tri_export.txt", "text/plain");
+    } else {
+        contenu = "Numero,URL,Categorie\n";
+        data.forEach(([n,url,cat]) => { contenu += `${n},"${url}",${cat}\n`; });
+        telecharger(contenu, "tri_export.csv", "text/csv");
+    }
+}
+
+function telecharger(texte, nomFichier, typeMime) {
+    let blob = new Blob([texte], {type: typeMime});
+    let lien = document.createElement("a");
+    lien.href = URL.createObjectURL(blob);
+    lien.download = nomFichier;
+    lien.click();
+}
+</script>
+</body>
+</html>
+
