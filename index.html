@@ -39,16 +39,28 @@
 <div class="card"><h2>📌 D - Divers (<span id="cd">0</span>)</h2><div id="D"></div></div>
 
 <script>
-// Vos 86 données initiales fixes
-let data=[[1,"https://facebook.com","M"],[2,"https://facebook.com","M"],[3,"https://facebook.com","M"],[4,"https://facebook.com","M"],[5,"https://facebook.com","M"],[6,"https://facebook.com","M"],[7,"https://facebook.com","M"],[8,"https://facebook.com","D"],[9,"https://facebook.com","D"],[10,"https://facebook.com","M"],[11,"https://facebook.com","M"],[12,"https://facebook.com","M"],[13,"https://facebook.com","M"],[14,"https://facebook.com","M"],[15,"https://facebook.com","C"],[16,"https://facebook.com","M"],[17,"https://facebook.com","M"],[18,"https://facebook.com","M"],[19,"https://facebook.com","M"],[20,"https://facebook.com","M"],[21,"https://facebook.com","M"],[22,"https://facebook.com","M"],[23,"https://facebook.com","M"],[24,"https://facebook.com","D"],[25,"https://facebook.com","D"],[26,"https://facebook.com","D"],[27,"https://facebook.com","M"],[28,"https://facebook.com","M"],[29,"https://facebook.com","M"],[30,"https://facebook.com","M"],[31,"https://facebook.com","M"],[32,"https://facebook.com","M"],[33,"https://facebook.com","D"],[34,"https://facebook.com","D"],[35,"https://facebook.com","M"],[36,"https://facebook.com","C"],[37,"https://facebook.com","M"],[38,"https://facebook.com","M"],[39,"https://facebook.com","D"],[40,"https://facebook.com","M"],[41,"https://facebook.com","D"],[42,"https://facebook.com","M"],[43,"https://facebook.com","D"],[44,"https://facebook.com","M"],[45,"https://facebook.com","M"],[46,"https://facebook.com","M"],[47,"https://facebook.com","M"],[48,"https://facebook.com","M"],[49,"https://facebook.com","C"],[50,"https://facebook.com","D"],[51,"https://facebook.com","M"],[52,"https://facebook.com","C"],[53,"https://facebook.com","M"],[54,"https://facebook.com","M"],[55,"https://facebook.com","C"],[56,"https://facebook.com","C"],[57,"https://facebook.com","D"],[58,"https://facebook.com","M"],[59,"https://facebook.com","C"],[60,"https://facebook.com","M"],[61,"https://facebook.com","M"],[62,"https://facebook.com","M"],[63,"https://facebook.com","M"],[64,"https://facebook.com","M"],[65,"https://facebook.com","M"],[66,"https://facebook.com","M"],[67,"https://facebook.com","M"],[68,"https://facebook.com","M"],[69,"https://facebook.com","C"],[70,"https://facebook.com","D"],[71,"https://facebook.com","M"],[72,"https://facebook.com","D"],[73,"https://facebook.com","D"],[74,"https://facebook.com","M"],[75,"https://facebook.com","C"],[76,"https://facebook.com","C"],[77,"https://facebook.com","C"],[78,"https://facebook.com","C"],[79,"https://facebook.com","D"],[80,"https://facebook.com","M"],[81,"https://facebook.com","C"],[82,"https://facebook.com","D"],[83,"https://facebook.com","D"],[84,"https://facebook.com","M"],[85,"https://facebook.com","C"],[86,"https://facebook.com","C"]];
+// Vos données initiales complètes incluant vos ajouts (88 bulles fixées)
+let data=[
+    [1,"https://www.facebook.com/share/v/1DriTPzGRp/?mibextid=wwXIfr","M"],[2,"https://www.facebook.com/share/r/1B41ygHDGd/?mibextid=wwXIfr","M"],[3,"https://www.facebook.com/share/r/1ZNxmam54K/?mibextid=wwXIfr","M"],[4,"https://www.facebook.com/share/v/1B732bRhbn/?mibextid=wwXIfr","M"],[5,"https://www.facebook.com/share/v/1ChXYgssQU/?mibextid=wwXIfr","M"],[6,"https://www.facebook.com/share/r/18iqV53bca/?mibextid=wwXIfr","M"],[7,"https://www.facebook.com/share/v/1pGVBLrxxk/?mibextid=wwXIfr","M"],[8,"https://www.facebook.com/share/v/1GGEyYLC73/?mibextid=wwXIfr","D"],[9,"https://www.facebook.com/share/r/1E9jLDArE5/?mibextid=wwXIfr","D"],[10,"https://www.facebook.com/share/r/1C91ZhLXFd/?mibextid=wwXIfr","M"],
+    [11,"https://www.facebook.com/share/r/1Hf5AfrdhD/?mibextid=wwXIfr","M"],[12,"https://www.facebook.com/share/r/17NBbcxfR8/?mibextid=wwXIfr","M"],[13,"https://www.facebook.com/share/r/1AnF3FMygi/?mibextid=wwXIfr","M"],[14,"https://www.facebook.com/share/r/1DkwxoA8QM/?mibextid=wwXIfr","M"],[15,"https://www.facebook.com/share/r/1CWLv2i1Gt/?mibextid=wwXIfr","C"],[16,"https://www.facebook.com/share/r/18kGPN599e/?mibextid=wwXIfr","M"],[17,"https://www.facebook.com/share/r/1BCyyrPSFC/?mibextid=wwXIfr","M"],[18,"https://www.facebook.com/share/r/1Au8VhAmg2/?mibextid=wwXIfr","M"],[19,"https://www.facebook.com/share/r/18mYZ6SB86/?mibextid=wwXIfr","M"],[20,"https://www.facebook.com/share/r/18NLBfKf4c/?mibextid=wwXIfr","M"],
+    [21,"https://www.facebook.com/share/r/16gp9dWLuD/?mibextid=wwXIfr","M"],[22,"https://www.facebook.com/share/r/1HUnvoxpJz/?mibextid=wwXIfr","M"],[23,"https://www.facebook.com/share/r/18is4Z8HnA/?mibextid=wwXIfr","M"],[24,"https://www.facebook.com/share/r/16BG1hKSba/?mibextid=wwXIfr","D"],[25,"https://www.facebook.com/share/r/1DmzZofipv/?mibextid=wwXIfr","D"],[26,"https://www.facebook.com/share/r/1V9bqZUucV/?mibextid=wwXIfr","D"],[27,"https://www.facebook.com/share/r/1RHPLYAMTd/?mibextid=wwXIfr","M"],[28,"https://www.facebook.com/share/r/1UNG6RBKkg/?mibextid=wwXIfr","M"],[29,"https://www.facebook.com/share/r/1AiovGRZ1G/?mibextid=wwXIfr","M"],[30,"https://www.facebook.com/share/r/1GyMd9MRRW/?mibextid=wwXIfr","M"],
+    [31,"https://www.facebook.com/share/r/18QEajmrKL/?mibextid=wwXIfr","M"],[32,"https://www.facebook.com/share/r/18YmGxgdqw/?mibextid=wwXIfr","M"],[33,"https://www.facebook.com/share/r/18iMKcsjyX/?mibextid=wwXIfr","D"],[34,"https://www.facebook.com/share/r/18Qism8JEh/?mibextid=wwXIfr","D"],[35,"https://www.facebook.com/share/v/1ChYvypaGN/?mibextid=wwXIfr","M"],[36,"https://www.facebook.com/share/r/1Gt8LHH9sy/?mibextid=wwXIfr","C"],[37,"https://www.facebook.com/share/r/18dBap6kT3/?mibextid=wwXIfr","M"],[38,"https://www.facebook.com/share/r/18Z5nYVxbz/?mibextid=wwXIfr","M"],[39,"https://www.facebook.com/share/r/18QMoKuejj/?mibextid=wwXIfr","D"],[40,"https://www.facebook.com/share/r/1Cq8KinFUU/?mibextid=wwXIfr","M"],
+    [41,"https://www.facebook.com/share/r/18cjZgLRJM/?mibextid=wwXIfr","D"],[42,"https://www.facebook.com/share/r/1JM36ZRjqY/?mibextid=wwXIfr","M"],[43,"https://www.facebook.com/share/r/1EYXGs5gNG/?mibextid=wwXIfr","D"],[44,"https://www.facebook.com/share/r/18QiguMJ91/?mibextid=wwXIfr","M"],[45,"https://www.facebook.com/share/r/18goqrJWVt/?mibextid=wwXIfr","M"],[46,"https://www.facebook.com/share/r/1PCwW2M8Y8/?mibextid=wwXIfr","M"],[47,"https://www.facebook.com/share/r/1Xec3qAu51/?mibextid=wwXIfr","M"],[48,"https://www.facebook.com/share/r/1DqQ9UZsNZ/?mibextid=wwXIfr","M"],[49,"https://www.facebook.com/share/r/195cBtcqXA/?mibextid=wwXIfr","C"],[50,"https://www.facebook.com/share/v/1BMRrkWPzL/?mibextid=wwXIfr","D"],
+    [51,"https://www.facebook.com/share/r/198415xy4Y/?mibextid=wwXIfr","M"],[52,"https://www.facebook.com/share/v/18xDjV9eZk/?mibextid=wwXIfr","C"],[53,"https://www.facebook.com/share/r/1BRH9Qzo8N/?mibextid=wwXIfr","M"],[54,"https://www.facebook.com/share/r/14krrB33PYw/?mibextid=wwXIfr","M"],[55,"https://www.facebook.com/share/r/1936agJDzt/?mibextid=wwXIfr","C"],[56,"https://www.facebook.com/share/v/1J4zpbRfP9/?mibextid=wwXIfr","C"],[57,"https://www.facebook.com/share/r/1BfAGnMh5s/?mibextid=wwXIfr","D"],[58,"https://www.facebook.com/share/r/1DnPcHTJe6/?mibextid=wwXIfr","M"],[59,"https://www.facebook.com/share/r/1ChTGE7wfb/?mibextid=wwXIfr","C"],[60,"https://www.facebook.com/share/r/19UdUDwp1s/?mibextid=wwXIfr","M"],
+    [61,"https://www.facebook.com/share/r/18tqug7AMT/?mibextid=wwXIfr","M"],[62,"https://www.facebook.com/share/r/1CN4v1eAUY/?mibextid=wwXIfr","M"],[63,"https://www.facebook.com/share/r/18C3ybk7er/?mibextid=wwXIfr","M"],[64,"https://www.facebook.com/share/r/1GdueCG628/?mibextid=wwXIfr","M"],[65,"https://www.facebook.com/share/r/18ZVrpxU2w/?mibextid=wwXIfr","M"],[66,"https://www.facebook.com/share/r/18oW8tCtm6/?mibextid=wwXIfr","M"],[67,"https://www.facebook.com/share/v/1C5S3EfBz4/?mibextid=wwXIfr","M"],[68,"https://www.facebook.com/share/r/19Vy4tLEvD/?mibextid=wwXIfr","M"],[69,"https://www.facebook.com/share/r/19LACB8i7p/?mibextid=wwXIfr","C"],[70,"https://www.facebook.com/share/r/1CsytGT97k/?mibextid=wwXIfr","D"],
+    [71,"https://www.facebook.com/share/v/1VFJct7NUt/?mibextid=wwXIfr","M"],[72,"https://www.facebook.com/share/v/1DWxwUHHBZ/?mibextid=wwXIfr","D"],[73,"https://www.facebook.com/share/r/18JQTELkEw/?mibextid=wwXIfr","D"],[74,"https://www.facebook.com/reel/1448796463696112/?fs=e&mibextid=wwXIfr","M"],[75,"https://www.facebook.com/share/r/14jZaNGkP84/?mibextid=wwXIfr","C"],[76,"https://www.facebook.com/share/r/18oAwFrBJK/?mibextid=wwXIfr","C"],[77,"https://www.facebook.com/share/r/1MRLqJTmHV/?mibextid=wwXIfr","C"],[78,"https://www.facebook.com/share/r/19NfyRtZiU/?mibextid=wwXIfr","C"],[79,"https://www.facebook.com/share/r/18RmPzzfXV/?mibextid=wwXIfr","D"],[80,"https://www.facebook.com/reel/2313124169498431/?fs=e&mibextid=wwXIfr","M"],
+    [81,"https://www.facebook.com/share/r/1Dfwm5ESKB/?mibextid=wwXIfr","C"],[82,"https://www.facebook.com/share/r/19aiEUbWQD/?mibextid=wwXIfr","D"],[83,"https://www.facebook.com/share/r/19fYyk3vmE/?mibextid=wwXIfr","D"],[84,"https://www.facebook.com/share/r/14jxokE439t/?mibextid=wwXIfr","M"],[85,"https://www.facebook.com/share/v/1dzfRmrV4v/?mibextid=wwXIfr","C"],[86,"https://www.facebook.com/share/v/19pcFKHLCF/?mibextid=wwXIfr","C"],
+    [87,"Lien_Bulle_87_Manuel","M"],
+    [88,"Lien_Bulle_88_Manuel","D"]
+];
 
-// Charger la mémoire locale du Chromebook
-let localSaved = JSON.parse(localStorage.getItem('tri86final') || '[]');
-if(localSaved.length > 86) {
+// Gestion de la mémoire locale du Chromebook (historique futur)
+let localSaved = JSON.parse(localStorage.getItem('tri88final') || '[]');
+if(localSaved.length > 88) {
     data = localSaved;
 }
 
-// Intercepter les paramètres envoyés par le favori
+// Système automatique pour intercepter les futurs envois via la case blanche ou favori
 window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const incomingUrl = params.get('url');
@@ -61,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!dejavu) {
             let nextNum = data.length + 1;
             data.push([nextNum, cleanUrl, incomingCat]);
-            localStorage.setItem('tri86final', JSON.stringify(data));
+            localStorage.setItem('tri88final', JSON.stringify(data));
         }
         window.history.replaceState({}, document.title, window.location.pathname);
     }
@@ -86,12 +98,3 @@ function add() {
     let u = document.getElementById('u').value.trim();
     let cat = document.getElementById('catSelect').value;
     if(!u) return;
-    let nextNum = data.length + 1;
-    data.push([nextNum, u, cat]);
-    localStorage.setItem('tri86final', JSON.stringify(data));
-    render();
-    document.getElementById('u').value = '';
-}
-
-function exporter(type) {
-    let contenu = "";
