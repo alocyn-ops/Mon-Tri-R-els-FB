@@ -61,20 +61,26 @@ if(localSaved.length > 88) {
 // Système automatique pour intercepter les futurs envois via la case blanche ou favori
 window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
-    const incomingUrl = params.get('url');
+    const incomingUrl = params.get('lien');
     const incomingCat = params.get('cat');
 
     if (incomingUrl && incomingCat) {
-        let cleanUrl = decodeURIComponent(incomingUrl);
+        let cleanUrl = incomingUrl;
+
+        document.getElementById('u').value = cleanUrl;
+        document.getElementById('catSelect').value = incomingCat;
+
         let dejavu = data.some(item => item[1] === cleanUrl);
-        
+
         if (!dejavu) {
             let nextNum = data.length + 1;
             data.push([nextNum, cleanUrl, incomingCat]);
             localStorage.setItem('tri88final', JSON.stringify(data));
         }
+
         window.history.replaceState({}, document.title, window.location.pathname);
     }
+
     render();
 });
 
